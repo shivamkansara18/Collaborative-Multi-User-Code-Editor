@@ -1,0 +1,11 @@
+* {
+    font-variant-ligatures: none;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background: #1c1e29;
+}

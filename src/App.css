@@ -1,0 +1,276 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap');
+@import url('https://fonts.cdnfonts.com/css/cascadia-code');
+
+:root {
+    --primary-bg: #1e1e2f;
+    --secondary-bg: #282a36;
+    --accent-color: #8ecae6;
+    --accent-hover-color: #219ebc;
+    --button-primary: #ffb703;
+    --button-hover: #fb8500;
+    --text-color: #e5e5e5;
+    --text-muted: #aaaaaa;
+    --error-color: #ef233c;
+    --success-color: #4caf50;
+}
+
+body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    font-weight: 500;
+    background: var(--primary-bg);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+}
+
+.homePageWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.formWrapper {
+    background: var(--secondary-bg);
+    padding: 24px;
+    border-radius: 12px;
+    width: 400px;
+    max-width: 90%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+footer a {
+    color: var(--accent-color);
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: var(--accent-hover-color);
+}
+
+.inputGroup {
+    display: flex;
+    flex-direction: column;
+}
+
+.mainLabel {
+    margin-bottom: 20px;
+    color: var(--text-color);
+}
+
+.homePageLogo {
+    height: 80px;
+    margin-bottom: 30px;
+}
+
+.inputBox {
+    padding: 12px;
+    border-radius: 6px;
+    outline: none;
+    border: none;
+    margin-bottom: 16px;
+    background: #333;
+    color: var(--text-color);
+    font-size: 16px;
+}
+
+.btn {
+    border: none;
+    padding: 12px;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.copyBtn {
+    background-color: var(--button-primary);
+    color: black;
+}
+
+.copyBtn:hover {
+    background-color: var(--button-hover);
+}
+
+.joinBtn {
+    background: var(--accent-color);
+    color: var(--text-color);
+    width: 100px;
+    margin-left: auto;
+}
+
+.joinBtn:hover {
+    background: var(--accent-hover-color);
+}
+
+.leaveBtn {
+    background: var(--error-color);
+    color: white;
+}
+
+.leaveBtn:hover {
+    background: #ff595e;
+}
+
+.createInfo {
+    margin: 20px auto 0;
+    color: var(--text-muted);
+}
+
+.createNewBtn {
+    color: var(--accent-color);
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+    font-weight: 500;
+}
+
+.createNewBtn:hover {
+    color: var(--accent-hover-color);
+}
+
+.mainWrap {
+    display: flex;
+    height: 100vh;
+    background: var(--primary-bg);
+}
+
+.aside {
+    background: var(--secondary-bg);
+    padding: 16px;
+    color: var(--text-color);
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.3);
+}
+
+.clientsList {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.client {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+.userName {
+    margin-top: 10px;
+}
+
+.logo {
+    border-bottom: 1px solid #444;
+    padding-bottom: 10px;
+}
+
+.logoImage {
+    height: 60px;
+}
+
+.seLang {
+    border: none;
+    width: 100%;
+    margin-top: 4px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    background: #333;
+    color: var(--text-color);
+}
+
+.leaveBtn {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.CodeMirror {
+    font-family: 'Cascadia Code', monospace;
+    background-color: #282a36;
+    color: #f8f8f2;
+    min-height: calc(100vh - 20px);
+    width: calc(100vw - 250px);
+    font-size: 16px;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+.hostBadge, .writeBadge {
+    font-size: 0.8em;
+    padding: 2px 6px;
+    border-radius: 4px;
+    margin-left: 8px;
+}
+
+.hostBadge {
+    background-color: var(--button-primary);
+    color: black;
+}
+
+.writeBadge {
+    background-color: var(--success-color);
+    color: white;
+}
+
+.pendingRequests {
+    margin: 16px 0;
+    padding: 8px;
+    background-color: #3a3a3a;
+    border-radius: 4px;
+    color: var(--text-muted);
+}
+
+.requestItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 8px 0;
+}
+
+.acceptBtn, .rejectBtn {
+    padding: 4px 8px;
+    margin-left: 8px;
+    font-size: 0.9em;
+    color: white;
+}
+
+.acceptBtn {
+    background-color: var(--success-color);
+}
+
+.rejectBtn {
+    background-color: var(--error-color);
+}
+
+.clientItem {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.revokeBtn {
+    background-color: #ff595e;
+    color: white;
+    padding: 4px 8px;
+    font-size: 12px;
+    margin-left: 8px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.revokeBtn:hover {
+    background-color: #d32f2f;
+}
