@@ -1,80 +1,77 @@
-Crime Data Analysis & Police Response Time Prediction
-This project focuses on analyzing crime data to identify patterns, trends, and high-risk zones, along with predicting police response times using machine learning. The goal is to support law enforcement in strategic resource allocation and proactive crime prevention.
+Collaborative Multi-User Code Editor
+
+A real-time collaborative code editor that allows multiple users to write and view code simultaneously, with dynamic permission control. Built using modern web technologies and WebSockets for seamless live interaction.
 
 
 1.  Objectives
-Analyze and visualize historical crime data to identify hotspot areas, recurring trends, and victim patterns.
+Enable real-time collaborative editing for multiple users.
 
-Predict crime types based on time, location, and other features using machine learning.
+Implement live updates across all connected clients using WebSockets.
 
-Estimate police response times using regression models to assist emergency planning.
+Create a host-controlled permission system to manage write access securely.
 
-Simulate data processing at a big data scale using HDFS for distributed storage.
+Maintain session consistency and prevent conflicting edits during collaboration.
 
 
 2.  Technologies Used
-Programming Language: Python
+Frontend: React, HTML/CSS
 
-Visualization Libraries: Matplotlib, Seaborn, Plotly
+Backend: Node.js, Express.js
 
-Database & Querying: PostgreSQL
+Real-Time Communication: WebSockets (Socket.IO)
 
-Machine Learning: scikit-learn (Random Forest, Regression Models)
+State Management: React Hooks and Context API
 
-Big Data Tools: Hadoop HDFS
-
-Data Format: CSV
+Deployment (optional): Docker, AWS EC2 or Vercel/Heroku
 
 
 3.  Key Features
- Hotspot Detection: Visual heatmaps and cluster analysis to identify high-crime zones.
+ Live Code Editing: Changes by one user instantly appear for all others.
 
- Trend Analysis: Time-based analysis to identify patterns across hours, days, and seasons.
+ Multi-User Support: Multiple users can join the same room to collaborate.
 
- Crime Classification: ML models to predict crime types based on input features.
+ Permission System: The host has full control to grant or revoke write access.
 
- Response Time Prediction: Regression model to estimate how long police might take to respond to a crime.
+ Session Consistency: Ensures only one writer at a time to avoid conflicts.
+
+ Room Sharing: Users can join shared rooms via invite code or link.
 
 
 4.  Project Structure
    
 .
 
-├── crime_data.csv                   # Dataset
+├── client/                         # React frontend
 
-├── crime_type_predict.py           # Crime type prediction model
+│   ├── components/                # Editor, JoinRoom, PermissionControl
 
-├── responsetime_predict.py         # Police response time model
+│   ├── App.js                     # Main component routing
 
-├── crime_hotspot.py                # Hotspot analysis and visualization
+│   └── style.css                  # UI styling
 
-├── data_ingestion.py               # Data preprocessing and loading
+│
 
-├── db_setup.py                     # PostgreSQL schema setup
+├── server/                         # Node.js backend
 
-├── hdfs_operations.py              # HDFS integration scripts
+│   ├── server.js                  # WebSocket and Express server
 
-├── response_time_analysis.png      # Sample visualization
+│   └── sessionManager.js          # Manages users and permissions
 
-├── Project Report.docx             # Detailed project documentation
+│
 
+├── package.json                   # Dependency management
 
-6.  Sample Visualizations
-Heatmaps showing crime density across geographic locations
-
-Line graphs representing crime frequency by hour/day
-
-Bar charts visualizing distribution by crime type or region
-
-Scatter plots used in police response time prediction
+├── README.md                      # Project documentation
 
 
-7.  Future Enhancements
-Integrate real-time crime feeds using external APIs
+6.  Future Enhancements
+Add syntax highlighting and language selection (e.g., with Monaco Editor).
 
-Build a web dashboard for interactive visualizations and alerts
+Store edit history and implement undo/redo functionality.
 
-Deploy ML models as RESTful APIs for real-time usage
+Implement authentication and user profiles for persistent permissions.
 
-Extend the system to Indian cities using localized datasets
+Add chat feature for communication between collaborators.
+
+Enable file saving or code export options.
 
