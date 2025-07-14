@@ -1,9 +1,9 @@
-Collaborative Multi-User Code Editor
+# Collaborative Multi-User Code Editor
 
 A real-time collaborative code editor that allows multiple users to write and view code simultaneously, with dynamic permission control. Built using modern web technologies and WebSockets for seamless live interaction.
 
 
-1.  Objectives
+### 1.  Objectives
 Enable real-time collaborative editing for multiple users.
 
 Implement live updates across all connected clients using WebSockets.
@@ -13,7 +13,7 @@ Create a host-controlled permission system to manage write access securely.
 Maintain session consistency and prevent conflicting edits during collaboration.
 
 
-2.  Technologies Used
+### 2.  Technologies Used
 Frontend: React, HTML/CSS
 
 Backend: Node.js, Express.js
@@ -25,7 +25,7 @@ State Management: React Hooks and Context API
 Deployment (optional): Docker, AWS EC2 or Vercel/Heroku
 
 
-3.  Key Features
+### 3.  Key Features
  Live Code Editing: Changes by one user instantly appear for all others.
 
  Multi-User Support: Multiple users can join the same room to collaborate.
@@ -37,7 +37,7 @@ Deployment (optional): Docker, AWS EC2 or Vercel/Heroku
  Room Sharing: Users can join shared rooms via invite code or link.
 
 
-4.  Project Structure
+### 4.  Project Structure
    
 .
 
@@ -64,7 +64,7 @@ Deployment (optional): Docker, AWS EC2 or Vercel/Heroku
 ├── README.md                      # Project documentation
 
 
-6.  Future Enhancements
+### 5.  Future Enhancements
 Add syntax highlighting and language selection (e.g., with Monaco Editor).
 
 Store edit history and implement undo/redo functionality.
